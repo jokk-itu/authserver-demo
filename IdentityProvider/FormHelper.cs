@@ -1,6 +1,6 @@
-﻿using WebApp.Constants;
+﻿using IdentityProvider.Constants;
 
-namespace WebApp;
+namespace IdentityProvider;
 public static class FormHelper
 {
   public static IEnumerable<string> GetFilteredKeys(IFormCollection formCollection)

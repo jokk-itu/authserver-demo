@@ -1,7 +1,6 @@
 ﻿using System.Text;
-using WebApp.Constants;
 
-namespace WebApp;
+namespace IdentityProvider;
 public static class FormPostBuilder
 {
   private const string _end = @"
@@ -13,9 +12,9 @@ public static class FormPostBuilder
   {
     var formBuilder = new StringBuilder();
     formBuilder.Append(AddStart(redirectUri));
-    formBuilder.Append(AddInput(ParameterNames.State, state));
-    formBuilder.Append(AddInput(ParameterNames.Code, code));
-    formBuilder.Append(AddInput(ParameterNames.Issuer, iss));
+    formBuilder.Append(AddInput("state", state));
+    formBuilder.Append(AddInput("code", code));
+    formBuilder.Append(AddInput("issuer", iss));
     formBuilder.Append(_end);
     return formBuilder.ToString();
   }
@@ -24,17 +23,17 @@ public static class FormPostBuilder
   {
     var formBuilder = new StringBuilder();
     formBuilder.Append(AddStart(redirectUri));
-    formBuilder.Append(AddInput(ParameterNames.State, state));
+    formBuilder.Append(AddInput("state", state));
     if (!string.IsNullOrWhiteSpace(error))
     {
-      formBuilder.Append(AddInput(ParameterNames.Error, error));
+      formBuilder.Append(AddInput("error", error));
     }
 
     if (!string.IsNullOrWhiteSpace(errorDescription))
     {
-      formBuilder.Append(AddInput(ParameterNames.ErrorDescription, errorDescription));
+      formBuilder.Append(AddInput("error_description", errorDescription));
     }
-    formBuilder.Append(AddInput(ParameterNames.Issuer, iss));
+    formBuilder.Append(AddInput("issuer", iss));
     formBuilder.Append(_end);
     return formBuilder.ToString();
   }

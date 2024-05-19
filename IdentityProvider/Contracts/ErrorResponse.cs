@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace WebApp.Contracts;
+namespace IdentityProvider.Contracts;
 public class ErrorResponse
 {
   public ErrorResponse()

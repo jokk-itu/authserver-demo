@@ -1,21 +1,13 @@
 ﻿using System.Net;
-using Application;
+using IdentityProvider.Constants;
+using IdentityProvider.Contracts;
 using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
-using WebApp.Constants;
-using WebApp.Contracts;
 
-namespace WebApp.Controllers.Abstracts;
+namespace IdentityProvider.Controllers.Abstracts;
 
 public abstract class OAuthControllerBase : Controller
 {
-    private readonly IdentityConfiguration _identityConfiguration;
-
-    protected OAuthControllerBase(IdentityConfiguration identityConfiguration)
-    {
-        _identityConfiguration = identityConfiguration;
-    }
-
     protected IActionResult CreatedOAuthResult(string locationPath, object createdEntity)
     {
       if (!Uri.TryCreate($"{Request.Scheme}://{Request.Host}/{locationPath}", UriKind.Absolute, out var location))
@@ -58,7 +50,7 @@ public abstract class OAuthControllerBase : Controller
         {
             StatusCode = (int)HttpStatusCode.OK,
             ContentType = MimeTypeConstants.Html,
-            Content = FormPostBuilder.BuildAuthorizationCodeResponse(redirectUri, state, code, _identityConfiguration.Issuer)
+            Content = FormPostBuilder.BuildAuthorizationCodeResponse(redirectUri, state, code, "")
         };
     }
 
@@ -74,10 +66,7 @@ public abstract class OAuthControllerBase : Controller
         throw new ArgumentException($"{nameof(state)} must not be null or whitespace");
       }
 
-      var query = new QueryBuilder
-      {
-        { ParameterNames.State, state }
-      }.ToQueryString();
+      var query = new QueryBuilder().ToQueryString();
 
       return Redirect($"{redirectUri}{query}");
     }
@@ -98,7 +87,7 @@ public abstract class OAuthControllerBase : Controller
         {
             StatusCode = (int)HttpStatusCode.OK,
             ContentType = MimeTypeConstants.Html,
-            Content = FormPostBuilder.BuildErrorResponse(redirectUri, state, error, errorDescription, _identityConfiguration.Issuer)
+            Content = FormPostBuilder.BuildErrorResponse(redirectUri, state, error, errorDescription, "")
         };
     }
 }

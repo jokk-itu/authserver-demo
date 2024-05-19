@@ -1,5 +1,4 @@
 ﻿@using System.Security.Claims
-@using Domain.Constants
 <form class="d-flex flex-column justify-content-center align-items-center" name="selectaccount" method="post">
     @foreach (var identity in User.Identities)
     {
@@ -18,12 +17,12 @@
     static string GetName(ClaimsIdentity identity)
     {
         return identity.Claims
-            .Single(x => x.Type == ClaimNameConstants.Name).Value;
+            .Single(x => x.Type == "name").Value;
     }
 
     static string GetIdentifier(ClaimsIdentity identity)
     {
         return identity.Claims
-            .Single(x => x.Type == ClaimNameConstants.Sub).Value;
+            .Single(x => x.Type == "sub").Value;
     }
 }

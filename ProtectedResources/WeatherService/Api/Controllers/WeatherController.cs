@@ -7,7 +7,7 @@ namespace Api.Controllers;
 [ApiController]
 public class WeatherController : ControllerBase
 {
-  private static readonly string[] _weatherTypes = { "Freezing", "Cold", "Mild", "Hot", "Scorching" };
+  private static readonly string[] WeatherTypes = ["Freezing", "Cold", "Mild", "Hot", "Scorching"];
 
   [Authorize(AuthenticationSchemes = OpenIdConnectDefaults.AuthenticationScheme, Policy = "Weather")]
   [HttpGet]
@@ -19,7 +19,7 @@ public class WeatherController : ControllerBase
       .Select(x => new 
       {
         Date = DateTime.Now.AddDays(x),
-        Weather = _weatherTypes[Random.Shared.Next(0, _weatherTypes.Length-1)],
+        Weather = WeatherTypes[Random.Shared.Next(0, WeatherTypes.Length-1)],
         Temperature = Random.Shared.Next(-50, 50)
       }));
   }

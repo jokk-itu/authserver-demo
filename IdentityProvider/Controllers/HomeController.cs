@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace WebApp.Controllers;
+namespace IdentityProvider.Controllers;
 
 public class HomeController : Controller
 {

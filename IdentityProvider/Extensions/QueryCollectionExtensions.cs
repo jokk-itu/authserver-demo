@@ -1,4 +1,4 @@
-﻿namespace WebApp.Extensions;
+﻿namespace IdentityProvider.Extensions;
 
 public static class QueryCollectionExtensions
 {

@@ -1,4 +1,4 @@
-﻿namespace WebApp.Constants;
+﻿namespace IdentityProvider.Constants;
 
 public static class CookieConstants
 {

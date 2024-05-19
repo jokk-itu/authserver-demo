@@ -1,17 +1,12 @@
-﻿using Microsoft.AspNetCore.Authentication.Cookies;
+﻿using IdentityProvider.Constants;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.Extensions.Options;
-using WebApp.Constants;
 using CookieBuilder = Microsoft.AspNetCore.Http.CookieBuilder;
 
-namespace WebApp.Options;
+namespace IdentityProvider.Options;
 
-public class ConfigureCookieAuthenticationOptions : IConfigureNamedOptions<CookieAuthenticationOptions>
+public class ConfigureCookieAuthenticationOptions : IConfigureOptions<CookieAuthenticationOptions>
 {
-  public void Configure(string name, CookieAuthenticationOptions options)
-  {
-    Configure(options);
-  }
-
   public void Configure(CookieAuthenticationOptions options)
   {
     options.Cookie = new CookieBuilder

@@ -1,4 +1,4 @@
-﻿namespace WebApp.ViewModels;
+﻿namespace IdentityProvider.ViewModels;
 
 public class LoginViewModel
 {
