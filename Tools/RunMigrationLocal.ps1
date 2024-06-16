@@ -1,3 +1,3 @@
-Push-Location ../Authorization/Infrastructure
-dotnet ef database update -- "Data Source=./Identity.db"
+Push-Location ../IdentityProvider
+dotnet ef database update 
 Pop-Location
