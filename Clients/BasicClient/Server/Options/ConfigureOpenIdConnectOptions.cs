@@ -50,7 +50,7 @@ public class ConfigureOpenIdConnectOptions : IConfigureOptions<OpenIdConnectOpti
         string[] resources = [_configuration.GetSection("WeatherService").GetValue<string>("Url"), identitySection.GetValue<string>("Authority")];
         //TODO set options.Resource (or not)
 
-        string[] scopes = ["openid", "profile", "address", "email", "phone", "weather:read", "identityprovider:userinfo"];
+        string[] scopes = ["openid", "profile", "address", "email", "phone", "weather:read", "authserver:userinfo"];
         foreach (var scope in scopes)
         {
             options.Scope.Add(scope);
