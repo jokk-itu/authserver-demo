@@ -1,10 +1,10 @@
-﻿using Microsoft.AspNetCore.Authentication;
+﻿using System.Collections.Specialized;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
-using System.Collections.Specialized;
 
-namespace App.Options;
+namespace Server.Options;
 
 public class ConfigureOpenIdConnectOptions : IConfigureOptions<OpenIdConnectOptions>
 {

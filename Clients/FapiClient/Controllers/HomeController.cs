@@ -1,12 +1,12 @@
-﻿using App.Models;
-using App.Services;
-using Microsoft.AspNetCore.Authentication;
+﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using WebApp.Models;
+using WebApp.Services;
 
-namespace App.Controllers;
+namespace WebApp.Controllers;
 public class HomeController : Controller
 {
   private readonly WeatherService _weatherService;

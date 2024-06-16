@@ -1,11 +1,11 @@
-using App;
-using App.Options;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Serilog;
 using Microsoft.IdentityModel.Logging;
-using App.Services;
 using Serilog.Events;
+using WebApp;
+using WebApp.Options;
+using WebApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

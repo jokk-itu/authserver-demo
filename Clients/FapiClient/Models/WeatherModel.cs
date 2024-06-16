@@ -1,6 +1,6 @@
-﻿using App.Contracts;
+﻿using WebApp.Contracts;
 
-namespace App.Models;
+namespace WebApp.Models;
 
 #nullable disable
 public class WeatherModel

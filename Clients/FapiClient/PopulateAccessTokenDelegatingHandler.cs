@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 
-namespace App;
+namespace WebApp;
 
 public class PopulateAccessTokenDelegatingHandler : DelegatingHandler
 {

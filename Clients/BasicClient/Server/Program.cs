@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using System.Net.Http.Headers;
-using App.Options;
 using Yarp.ReverseProxy.Transforms;
 using Serilog;
 using Serilog.Events;

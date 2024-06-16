@@ -1,6 +1,6 @@
-﻿using App.Contracts;
+﻿using WebApp.Contracts;
 
-namespace App.Services;
+namespace WebApp.Services;
 
 public class WeatherService
 {

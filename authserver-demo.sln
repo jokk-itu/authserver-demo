@@ -5,15 +5,15 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Clients\BasicClient\Shared\Shared.csproj", "{BD745363-327E-4D93-9250-8373791E51ED}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasicClient", "BasicClient", "{675D6FB6-2BC5-4665-81C3-0E298C254504}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BffClient", "BffClient", "{675D6FB6-2BC5-4665-81C3-0E298C254504}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "Clients\BasicClient\Server\Server.csproj", "{CCD2ED2F-0C64-4821-969A-0CFFF123BE4E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Clients\BasicClient\Client\Client.csproj", "{E03A49E7-74E7-413D-945E-5216A94357FA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FapiClient", "FapiClient", "{A7D68F50-EE66-4521-9C03-2D53017ED1B6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebClient", "WebClient", "{A7D68F50-EE66-4521-9C03-2D53017ED1B6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App", "Clients\FapiClient\App.csproj", "{5A55BD14-50F0-42B2-B408-F428E08332D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "Clients\FapiClient\WebApp.csproj", "{5A55BD14-50F0-42B2-B408-F428E08332D2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WorkerClient", "WorkerClient", "{357D98DF-E9B8-441A-8385-726D64C939A7}"
 EndProject

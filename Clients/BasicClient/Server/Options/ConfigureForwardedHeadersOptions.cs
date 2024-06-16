@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Options;
 
-namespace App.Options;
+namespace Server.Options;
 
 public class ConfigureForwardedHeadersOptions : IConfigureOptions<ForwardedHeadersOptions>
 {

@@ -1,4 +1,4 @@
-﻿namespace App.Contracts;
+﻿namespace WebApp.Contracts;
 
 public class WeatherDto
 {

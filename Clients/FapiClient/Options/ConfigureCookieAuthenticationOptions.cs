@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 
-namespace App.Options;
+namespace WebApp.Options;
 
 public class ConfigureCookieAuthenticationOptions : IConfigureOptions<CookieAuthenticationOptions>
 {
