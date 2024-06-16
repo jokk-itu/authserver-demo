@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 
-namespace WebApp.Options;
+namespace Server.Options;
 
 public class ConfigureCookieAuthenticationOptions : IConfigureOptions<CookieAuthenticationOptions>
 {
@@ -25,10 +25,10 @@ public class ConfigureCookieAuthenticationOptions : IConfigureOptions<CookieAuth
 
     public void Configure(CookieAuthenticationOptions options)
     {
-        options.LoginPath = "/Home/Login";
-        options.LogoutPath = "/Home/Logout";
-        options.ReturnUrlParameter = "Home";
-        options.Cookie.Name = "IdentityCookie-FapiClient";
+        options.LoginPath = "/api/user/login";
+        options.LogoutPath = "/api/user/logout";
+        options.ReturnUrlParameter = "/";
+        options.Cookie.Name = "IdentityCookie-BffClient";
         options.Cookie.HttpOnly = true;
         options.Cookie.IsEssential = true;
         options.Cookie.SameSite = SameSiteMode.Strict;

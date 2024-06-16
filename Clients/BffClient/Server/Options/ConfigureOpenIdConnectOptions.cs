@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 
-namespace WebApp.Options;
+namespace Server.Options;
 
 public class ConfigureOpenIdConnectOptions : IConfigureOptions<OpenIdConnectOptions>
 {
@@ -59,13 +59,13 @@ public class ConfigureOpenIdConnectOptions : IConfigureOptions<OpenIdConnectOpti
         options.ResponseMode = OpenIdConnectResponseMode.FormPost;
         options.MaxAge = TimeSpan.FromSeconds(3600);
 
-        options.NonceCookie.Name = "FapiClient-Nonce";
+        options.NonceCookie.Name = "BffClient-Nonce";
         options.NonceCookie.HttpOnly = true;
         options.NonceCookie.IsEssential = true;
         options.NonceCookie.SameSite = SameSiteMode.Strict;
         options.NonceCookie.SecurePolicy = CookieSecurePolicy.Always;
 
-        options.CorrelationCookie.Name = "FapiClient-Correlation";
+        options.CorrelationCookie.Name = "BffClient-Correlation";
         options.CorrelationCookie.HttpOnly = true;
         options.CorrelationCookie.IsEssential = true;
         options.CorrelationCookie.SameSite = SameSiteMode.Strict;
